@@ -68,12 +68,26 @@ export function Contact() {
           <form
             onSubmit={(e) => {
               e.preventDefault();
+              const form = e.target as HTMLFormElement;
+              const data = new FormData(form);
+              const name = String(data.get("name") ?? "").trim();
+              const email = String(data.get("email") ?? "").trim();
+              const message = String(data.get("message") ?? "").trim();
+              if (!name || !email || !message) return;
               setSending(true);
+              const subject = `Portfolio contact from ${name}`;
+              const body = `Hi Arsh,\n\n${message}\n\n— ${name}\n${email}`;
+              const mailto = `mailto:${profile.email}?subject=${encodeURIComponent(
+                subject,
+              )}&body=${encodeURIComponent(body)}`;
+              window.location.href = mailto;
               setTimeout(() => {
                 setSending(false);
-                toast.success("Message sent — I'll reply within 24h.");
-                (e.target as HTMLFormElement).reset();
-              }, 900);
+                toast.success("Opening your email app…", {
+                  description: "Hit send in your mail client to deliver the message.",
+                });
+                form.reset();
+              }, 600);
             }}
             className="glass space-y-5 rounded-3xl p-8"
           >
