@@ -56,7 +56,7 @@ export const projects = [
     slug: "syncora",
     name: "Syncora",
     subtitle: "AI-Powered Peer-to-Peer Video Conferencing",
-    year: "2025",
+    year: "2026",
     tech: ["React", "Node.js", "Express", "MongoDB", "WebRTC", "Socket.IO", "Clerk"],
     overview:
       "A production-grade video conferencing platform with AI transcription, live translation, and noise suppression — built on a peer-to-peer WebRTC core.",
@@ -84,7 +84,7 @@ export const projects = [
     slug: "doctorhub",
     name: "DoctorHub",
     subtitle: "Online Doctor Appointment Booking Platform",
-    year: "2024",
+    year: "2026",
     tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "JWT"],
     overview:
       "A full-stack healthcare platform connecting patients and doctors through role-based dashboards, appointments, and availability management.",
