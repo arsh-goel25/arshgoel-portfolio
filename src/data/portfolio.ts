@@ -110,7 +110,7 @@ export const projects = [
 ];
 
 export const achievements = [
-  { value: 100, suffix: "+", label: "LeetCode Problems Solved" },
+  { value: 150, suffix: "+", label: "LeetCode Problems Solved" },
   { value: 8.0, suffix: "", label: "Current CGPA", decimals: 1 },
   { value: 2, suffix: "+", label: "Production MERN Projects" },
 ];
